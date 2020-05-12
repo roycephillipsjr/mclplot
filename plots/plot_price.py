@@ -1,5 +1,2 @@
-import matplotlib.pyplot as plt
-
-def plot_price(data):
-    plt.plot(data.Close, color="navy")
-    plt.show()
+def plot_price(ax, data):
+    ax.plot(data.Close, color="navy")

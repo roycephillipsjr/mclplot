@@ -1,4 +1,5 @@
 import sys
+import matplotlib.pyplot as plt
 
 import yfinance as yf
 
@@ -10,4 +11,6 @@ graph = sys.argv[2]
 data = yf.download(sym, period="6mo", progress=False)
 
 if graph == "price":
-    plot_price(data)
+    fig, ax = plt.subplots(figsize=(12, 18))
+    plot_price(ax, data)
+plt.show()
